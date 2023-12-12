@@ -1,0 +1,68 @@
+[
+  {
+    "id": 8267098980637,
+    "title": "Oxygen Snowboard",
+    "description": null,
+    "price": 35099,
+    "images": [
+      {
+        "src": "https://cdn.shopify.com/s/files/1/0746/7876/3805/products/Main_d624f226-0a89-4fe1-b333-0d1548b43c06.jpg?v=1682125898"
+      }
+    ]
+  },
+  {
+    "id": 8267099111709,
+    "title": "Ski Wax",
+    "description": null,
+    "price": 3199,
+    "images": [
+      {
+        "src": "https://cdn.shopify.com/s/files/1/0746/7876/3805/products/snowboard_wax.png?v=1682125900"
+      }
+    ]
+  },
+  {
+    "id": 8267098685725,
+    "title": "Hydrogen Snowboard",
+    "description": null,
+    "price": 41089,
+    "images": [
+      {
+        "src": "https://cdn.shopify.com/s/files/1/0746/7876/3805/products/Main_0a40b01b-5021-48c1-80d1-aa8ab4876d3d.jpg?v=1682125897"
+      }
+    ]
+  },
+  {
+    "id": 8267099013405,
+    "title": "Other Snowboard",
+    "description": "blah blah",
+    "price": 45000,
+    "images": [
+      {
+        "src": "https://cdn.shopify.com/s/files/1/0746/7876/3805/products/Main.jpg?v=1682125898"
+      }
+    ]
+  },
+  {
+    "id": 8267098882333,
+    "title": "Cool Snowboard",
+    "price": 75034,
+    "description": "null",
+    "images": [
+      {
+        "src": "https://cdn.shopify.com/s/files/1/0746/7876/3805/products/snowboard_sky.png?v=1682125897"
+      }
+    ]
+  },
+  {
+    "id": 8267098652957,
+    "title": "The Complete Snowboard",
+    "price": 82345,
+    "description": "This <b>PREMIUM</b> <i>snowboard</i> is so <b>SUPER</b><i>DUPER</i> awesome!",
+    "images": [
+      {
+        "src": "https://cdn.shopify.com/s/files/1/0746/7876/3805/products/Main_589fc064-24a2-4236-9eaf-13b2bd35d21d.jpg?v=1682125897"
+      }
+    ]
+  }
+]
