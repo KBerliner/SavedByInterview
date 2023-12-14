@@ -2,7 +2,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="./index.css" />
   <script src="/app.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
   <title>SavedBy Mock Store</title>
@@ -10,9 +10,27 @@
 
 <body>
   <header>
+    <h1>SavedBy Store</h1>
+    <svg class="cart--button" viewBox="0 0 24 24"><path d="m7 18c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-6-16v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2h-11.58c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1h-14.79l-.94-2zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
   </header>
 
   <main>
+    <section class="search">
+      <input class="search--input" placeholder="Search Products..." />
+    </section>
+    <section class="products">
+      <h2 class="products--header">Products</h2>
+      <div class="products--grid">
+        <!-- 
+          Below is a model for what JavaScript is rendering:
+         -->
+         <div class="product">
+          <img class="product--image" src="https://cdn.shopify.com/s/files/1/0746/7876/3805/products/Main_d624f226-0a89-4fe1-b333-0d1548b43c06.jpg?v=1682125898" />
+          <h3 class="product--title">Oxygen Snowboard</h3>
+          <p class="product--price">$350.99</p>
+         </div>
+      </div>
+    </section>
   </main>
 </body>
 
