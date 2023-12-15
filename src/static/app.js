@@ -1,9 +1,32 @@
 window.addEventListener("DOMContentLoaded", setup);
 
 async function setup() {
+	
+	// Assigning necessary variables
+
+	let products = [];
+	
+	const searchInput = document.getElementsByClassName('search--input')[0];
+	
+	// Search Bar Functionality
+
+	searchInput.addEventListener('input', ({ target }) => {
+		const value = target.value;
+		products.forEach(product => {
+			const isVisible = product.title.includes(value);
+			const element = document.getElementById(product.id);
+			if (!isVisible) {
+				element.style.display = 'none';
+			} else {
+				element.style.display = 'inline';
+			}
+			
+		})
+	})
+
 	// Creating an HTML Framework for the product element
 
-	function productFramework(imageSrc, price, title) {
+	function productFramework(imageSrc, price, title, id) {
 		// Creating and accessing all the necessary elements
 
 		
@@ -15,6 +38,7 @@ async function setup() {
 		// Adding the correct attributes and classes
 
 		product.classList.add('product');
+		product.id = id;
 		productImage.classList.add('product--image');
 		productImage.setAttribute('src', imageSrc);
 		productTitle.classList.add('product--title');
@@ -24,7 +48,12 @@ async function setup() {
 
 		productTitle.innerHTML = title;
 
-		let displayPrice = `$${price}`;
+		const USD = new Intl.NumberFormat('en-US', {
+			style: 'currency',
+			currency: 'USD'
+		}).format(price / 100);
+
+		let displayPrice = USD;
 
 		productPrice.textContent = displayPrice;
 
@@ -46,7 +75,7 @@ async function setup() {
 		// Looping through the API results and appending them to the DOM
 	
 		for (let product in products) {
-			const productElement = productFramework(products[product].images[0].src, products[product].price, products[product].title);
+			const productElement = productFramework(products[product].images[0].src, products[product].price, products[product].title, products[product].id);
 			const container = document.getElementsByClassName('products--grid')[0];
 
 			container.appendChild(productElement);
@@ -64,6 +93,9 @@ async function setup() {
 				return response.json();
 		}).then(data => {
 			console.log(data);
+			products = data.map(product => {
+				return { title: product.title, price: product.price, id: product.id };
+			})
 			renderProducts(data);
 		})
 		.catch((error) => {
